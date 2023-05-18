@@ -1,5 +1,4 @@
 import java.sql.*;
-import java.util.IllegalFormatCodePointException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
@@ -22,7 +21,6 @@ public class _14_13_Ask_Show
             ResultSet resultSet = statement.executeQuery(sql);
             while (resultSet.next())
             {
-
                 int dept_no = resultSet.getInt(1);
                 String dnombre = resultSet.getString(2);
                 String locShow = resultSet.getString(3);
