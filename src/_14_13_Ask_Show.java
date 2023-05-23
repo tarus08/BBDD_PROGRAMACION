@@ -12,7 +12,7 @@ public class _14_13_Ask_Show
         try
         {
             _14_12_Depart depart = null;
-            connection = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521", "DAM", "1234");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost/instituto", "root", "admin1234_");
             Statement statement = connection.createStatement();
             System.out.println("Insert the name of the city to show the data of: ");
             String loc = new Scanner(System.in).nextLine().toUpperCase();

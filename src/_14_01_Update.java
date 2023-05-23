@@ -9,11 +9,11 @@ public class _14_01_Update {
             Connection con;
             PreparedStatement sentencia;
             String sql;
-            String url = "jdbc:oracle:thin:@localhost:1521/XE";
-            String username = "DAM";
-            String password = "1234";
+            String url = "jdbc:mysql://localhost/instituto";
+            String username = "root";
+            String password = "admin1234_";
             con = DriverManager.getConnection(url, username, password);
-            sql = "UPDATE ALUM_PROGRAMACION SET MEDIA = MEDIA + 1 WHERE CURSO LIKE '1B'";
+            sql = "UPDATE ALUMNOS SET MEDIA = MEDIA + 1 WHERE CURSO LIKE '1B'";
             sentencia = con.prepareStatement(sql);
             int rowsAffected = sentencia.executeUpdate();
             System.out.println("Se ha modificado la media de " + rowsAffected + " estudiantes");

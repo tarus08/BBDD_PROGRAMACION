@@ -10,7 +10,7 @@ public class _14_12_Mapeo
         try
         {
             _14_12_Depart depart;
-            Connection conec = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521", "DAM", "1234");
+            Connection conec = DriverManager.getConnection("jdbc:mysql://localhost/instituto", "root", "admin1234_");
             Statement statement = conec.createStatement();
             String sql = "SELECT * FROM DEPART";
             ResultSet rs = statement.executeQuery(sql);

@@ -11,13 +11,13 @@ public class _14_09_Informes
         List<_14_09_Alum_Progr> alumProgrList7to9 = new LinkedList<>();
         try
         {
-            String url = "jdbc:oracle:thin:@localhost:1521";
-            String username = "DAM";
-            String password = "1234";
+            String url = "jdbc:mysql://localhost/instituto";
+            String username = "root";
+            String password = "admin1234_";
             Connection connection = DriverManager.getConnection(url, username, password);
 
             System.out.println("Students whose grades are between 6 and 7, in ascending order.");
-            String sql01 = "SELECT * FROM ALUM_PROGRAMACION WHERE MEDIA BETWEEN 6 AND 7 ORDER BY MEDIA ASC";
+            String sql01 = "SELECT * FROM ALUMNOS WHERE MEDIA BETWEEN 6 AND 7 ORDER BY MEDIA ASC";
             PreparedStatement preparedStatement01 = connection.prepareStatement(sql01);
             ResultSet resultSet01 = preparedStatement01.executeQuery();
             while (resultSet01.next())
@@ -36,7 +36,7 @@ public class _14_09_Informes
             }
             System.out.println("---------------------------------------------");
             System.out.println("Students whose grades are between 7 and 9, in ascending order.");
-            String sql02 = "SELECT * FROM ALUM_PROGRAMACION WHERE MEDIA BETWEEN 7 AND 9 ORDER BY MEDIA ASC";
+            String sql02 = "SELECT * FROM ALUMNOS WHERE MEDIA BETWEEN 7 AND 9 ORDER BY MEDIA ASC";
             PreparedStatement preparedStatement02 = connection.prepareStatement(sql02);
             ResultSet resultSet02 = preparedStatement02.executeQuery();
             while (resultSet02.next())

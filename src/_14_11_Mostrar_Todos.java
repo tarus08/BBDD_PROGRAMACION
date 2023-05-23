@@ -5,7 +5,7 @@ public class _14_11_Mostrar_Todos
     public static void main(String[] args) throws SQLException {
         Statement statement;
         String sql;
-        Connection conec = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521", "DAM", "1234");
+        Connection conec = DriverManager.getConnection("jdbc:mysql://localhost/instituto", "root", "admin1234_");
         try
         {
             statement = conec.createStatement();

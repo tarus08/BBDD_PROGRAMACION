@@ -3,9 +3,9 @@ import java.util.ArrayList;
 import java.util.List;
 public class _14_15_Check_Insert_Delete {
     public static Connection Connection() throws SQLException {
-        String url = "jdbc:oracle:thin:@localhost:1521";
-        String username = "DAM";
-        String password = "1234";
+        String url = "jdbc:mysql://localhost/instituto";
+        String username = "root";
+        String password = "admin1234_";
         return DriverManager.getConnection(url, username, password);
     }
 

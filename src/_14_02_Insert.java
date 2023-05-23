@@ -10,12 +10,12 @@ public class _14_02_Insert
     {
         Scanner scanner = new Scanner(System.in);
         try {
-            String url = "jdbc:oracle:thin:@localhost:1521/XE";
-            String username = "DAM";
-            String password = "1234";
+            String url = "jdbc:mysql://localhost/instituto";
+            String username = "root";
+            String password = "admin1234_";
             Connection con = DriverManager.getConnection(url, username, password);
 
-            String sqlCheck = "SELECT NUM FROM ALUM_PROGRAMACION";
+            String sqlCheck = "SELECT NUM FROM ALUMNOS";
             PreparedStatement preparedStatement01 = con.prepareStatement(sqlCheck);
             ResultSet resultSet = preparedStatement01.executeQuery();
 

@@ -4,12 +4,12 @@ public class _14_06_Cursor_Before_After
     public static void main(String[] args)
     {
         try {
-            String url = "jdbc:oracle:thin:@localhost:1521";
-            String username = "DAM";
-            String password = "1234";
+            String url = "jdbc:mysql://localhost/instituto";
+            String username = "root";
+            String password = "admin1234_";
             Connection connection = DriverManager.getConnection(url, username, password);
             Statement statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            String sql = "SELECT NOMBRE, MEDIA FROM ALUM_PROGRAMACION ORDER BY MEDIA DESC";
+            String sql = "SELECT NOMBRE, MEDIA FROM ALUMNOS ORDER BY MEDIA DESC";
             ResultSet resultSet = statement.executeQuery(sql);
             System.out.println("All the students.");
             while (resultSet.next())
